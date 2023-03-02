@@ -15,11 +15,15 @@ make
 ```
 ## Initialize ROS
 
+To run any ROS topic:
+
 ```shell
 roscore
 ```
 
 ## Run the tracking algorithm
+
+Open a new terminal
 
 ```shell
 rosrun object_tracking build/devel/lib/object_tracking/object_tracking_node
