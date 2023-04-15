@@ -174,7 +174,7 @@ std::vector<float> get_bboxes(const cv::Mat& bgr, const std::vector<BoxInfo>& bb
 
 vector<Object> convert_bytetrack(const std::vector<BoxInfo>& results, const cv::Mat& image, const object_rect effect_roi){
     //Converts Nanodet bbox to ByteTrack style tlwh with score and label
-    static int num_dets = results.size();
+    int num_dets = results.size();
     vector<Object> objects;
     objects.resize(num_dets);
 
@@ -201,7 +201,7 @@ int intelrealsense_inference(ros::Publisher pub_bbox, ros::Publisher pub_rel_pos
     using namespace cv;
     using namespace rs2;
     
-    auto detector = NanoDet("/home/colby/catkin_ws/src/object_tracking/src/nanodet.xml", "CPU", 32);
+    auto detector = NanoDet("./../src/nanodet.xml", "CPU", 32);
     BYTETracker tracker(10, 30);
     const int height = detector.input_size[0];
     const int width = detector.input_size[1];
