@@ -7,7 +7,7 @@ Link to [Setup](https://github.com/DroneVideo/docs/blob/gh-pages/setup.md)
 ## Build
 
 ```shell
-cd ~/catkin_ws/src/object_tracking
+cd ~/catkin_ws/src/bytetrack-demo-2023/
 mkdir build
 cd build
 cmake ..
